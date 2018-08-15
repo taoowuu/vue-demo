@@ -8,8 +8,17 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  // el: '#app',
   router,
   components: { App },
-  template: '<App/>'
-})
+  // template: '<App/>'
+  template: `
+  <div id='app'>
+    <ul>
+      <li><router-link to='/'>HelloWorld</router-link></li>
+      <li><router-link to='/todo'>Todo</router-link></li>
+    </ul>
+    <router-view/>
+  </div>
+  `
+}).$mount('#app')
